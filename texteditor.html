@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WebCode</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Monaco Editor loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/loader.min.js"></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◇</span>
+      <span>WebCode</span>
+    </div>
+
+    <div class="actions">
+      <button id="runBtn" class="run-btn">
+        ▶ Run
+      </button>
+
+      <button id="stopBtn">
+        ■ Stop
+      </button>
+
+      <button id="refreshBtn">
+        ↻ Refresh
+      </button>
+    </div>
+
+    <div class="status" id="status">
+      Ready
+    </div>
+  </header>
+
+  <main class="workspace">
+
+    <!-- LEFT SIDE -->
+    <section class="editor-panel">
+
+      <div class="tabs">
+        <button class="tab active" data-file="html">
+          <span class="html-icon">●</span>
+          index.html
+        </button>
+
+        <button class="tab" data-file="css">
+          <span class="css-icon">●</span>
+          style.css
+        </button>
+
+        <button class="tab" data-file="js">
+          <span class="js-icon">●</span>
+          script.js
+        </button>
+      </div>
+
+      <div id="editor"></div>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section class="preview-panel">
+
+      <div class="panel-header">
+        <span>Live Preview</span>
+
+        <button id="openPreview">
+          ↗
+        </button>
+      </div>
+
+      <iframe
+        id="preview"
+        sandbox="allow-scripts allow-forms allow-modals allow-popups"
+        title="Live Preview">
+      </iframe>
+
+    </section>
+
+  </main>
+
+  <!-- CONSOLE -->
+  <section class="console-panel">
+
+    <div class="console-header">
+
+      <span>Console</span>
+
+      <button id="clearConsole">
+        Clear
+      </button>
+
+    </div>
+
+    <pre id="console"></pre>
+
+  </section>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
